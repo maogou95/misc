@@ -1,0 +1,1481 @@
+Dependencies for Project 'gud600', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\User\gd32f10x_it.c)(0x68B00F1C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_it.o -MD)
+I (User\gd32f10x_it.h)(0x681C11FD)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\systick.h)(0x6829A8E6)
+I (User\lcd.h)(0x6823FCEE)
+I (User\spi_flash.h)(0x682ED333)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bsp_timer.h)(0x682995F3)
+I (User\bw236.h)(0x685D0DE8)
+F (.\User\gd32f10x_it.h)(0x681C11FD)()
+F (.\User\gd32f10x_libopt.h)(0x679209E7)()
+F (.\User\main.h)(0x69047781)()
+F (.\User\systick.c)(0x68394A28)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/systick.o -MD)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (User\systick.h)(0x6829A8E6)
+F (.\User\systick.h)(0x6829A8E6)()
+F (.\User\main.c)(0x690478C1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/main.o -MD)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (User\systick.h)(0x6829A8E6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\lcd.h)(0x6823FCEE)
+I (User\spi_flash.h)(0x682ED333)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bsp_timer.h)(0x682995F3)
+I (User\bw236.h)(0x685D0DE8)
+I (User\i2c.h)(0x683686EE)
+I (User\misc.h)(0x68298DFD)
+I (User\can.h)(0x68F87172)
+I (User\rtc.h)(0x68299F58)
+F (.\User\usart.c)(0x685E4F86)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/usart.o -MD)
+I (User\usart.h)(0x6837D532)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\gpio.h)(0x6833C0CC)
+I (User\systick.h)(0x6829A8E6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\User\usart.h)(0x6837D532)()
+F (.\User\gpio.c)(0x685E4C5C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gpio.o -MD)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+F (.\User\gpio.h)(0x6833C0CC)()
+F (.\User\adc.c)(0x68245280)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/adc.o -MD)
+I (User\adc.h)(0x6824528A)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\systick.h)(0x6829A8E6)
+F (.\User\adc.h)(0x6824528A)()
+F (.\User\spi_flash.c)(0x6833CE44)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/spi_flash.o -MD)
+I (User\spi_flash.h)(0x682ED333)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\systick.h)(0x6829A8E6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\User\spi_flash.h)(0x682ED333)()
+F (.\User\lcd.c)(0x6833CE68)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/lcd.o -MD)
+I (User\lcd.h)(0x6823FCEE)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\systick.h)(0x6829A8E6)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bsp_timer.h)(0x682995F3)
+I (User\bw236.h)(0x685D0DE8)
+I (User\spi_flash.h)(0x682ED333)
+I (User\lcdfont.h)(0x6825931A)
+F (.\User\can.c)(0x68F8717A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/can.o -MD)
+I (User\can.h)(0x68F87172)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\systick.h)(0x6829A8E6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\User\can.h)(0x68F87172)()
+F (.\User\i2c.c)(0x68B00DA5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/i2c.o -MD)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (User\i2c.h)(0x683686EE)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x603507CA)
+I (User\systick.h)(0x6829A8E6)
+F (.\User\rtc.c)(0x68381D02)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/rtc.o -MD)
+I (User\rtc.h)(0x68299F58)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+F (.\User\misc.c)(0x68298E04)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/misc.o -MD)
+I (User\misc.h)(0x68298DFD)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\systick.h)(0x6829A8E6)
+I (User\lcd.h)(0x6823FCEE)
+I (User\spi_flash.h)(0x682ED333)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bsp_timer.h)(0x682995F3)
+I (User\bw236.h)(0x685D0DE8)
+F (.\User\misc.h)(0x68298DFD)()
+F (.\User\bsp_timer.c)(0x671F0882)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/bsp_timer.o -MD)
+I (User\bsp_timer.h)(0x682995F3)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\systick.h)(0x6829A8E6)
+I (User\lcd.h)(0x6823FCEE)
+I (User\spi_flash.h)(0x682ED333)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bw236.h)(0x685D0DE8)
+F (.\User\bw236.c)(0x68B00141)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/bw236.o -MD)
+I (User\bw236.h)(0x685D0DE8)
+I (User\main.h)(0x69047781)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (User\usart.h)(0x6837D532)
+I (User\adc.h)(0x6824528A)
+I (User\systick.h)(0x6829A8E6)
+I (User\lcd.h)(0x6823FCEE)
+I (User\spi_flash.h)(0x682ED333)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (User\bsp_timer.h)(0x682995F3)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\ctype.h)(0x603507B6)
+F (.\User\bw236.h)(0x685D0DE8)()
+F (.\Library\gd32f10x_adc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_adc.o -MD)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_bkp.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_bkp.o -MD)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_can.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_can.o -MD)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_crc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_crc.o -MD)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_dac.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_dac.o -MD)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_dbg.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_dbg.o -MD)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_dma.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_dma.o -MD)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_enet.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_enet.o -MD)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+F (.\Library\gd32f10x_exmc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_exmc.o -MD)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_exti.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_exti.o -MD)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_fmc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_fmc.o -MD)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_fwdgt.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_fwdgt.o -MD)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_gpio.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_gpio.o -MD)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_i2c.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_i2c.o -MD)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_misc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_misc.o -MD)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+F (.\Library\gd32f10x_pmu.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_pmu.o -MD)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_rcu.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_rcu.o -MD)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_rtc.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_rtc.o -MD)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_sdio.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_sdio.o -MD)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_spi.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_spi.o -MD)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_timer.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_timer.o -MD)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_usart.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_usart.o -MD)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Library\gd32f10x_wwdgt.c)(0x679209E9)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/gd32f10x_wwdgt.o -MD)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Start\system_gd32f10x.c)(0x679209E7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/system_gd32f10x.o -MD)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\Start\startup_gd32f10x_md.s)(0x679209E7)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"GD32F10X_HD SETA 1" -Wa,armasm,--pd,"USE_STDPERIPH_DRIVER SETA 1"-o ./objects/startup_gd32f10x_md.o)
+F (.\Start\startup_gd32f10x_hd.s)(0x685E313E)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4 -Wa,armasm,--pd,"__MICROLIB SETA 1"-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 536" -Wa,armasm,--pd,"GD32F10X_HD SETA 1" -Wa,armasm,--pd,"USE_STDPERIPH_DRIVER SETA 1"-o ./objects/startup_gd32f10x_hd.o)
+F (.\fs\lfs_util.c)(0x66300F6D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/lfs_util.o -MD)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+F (.\fs\lfs_port.c)(0x681C6725)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/lfs_port.o -MD)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+F (.\fs\lfs.c)(0x66300F6D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/lfs.o -MD)
+I (fs\lfs.h)(0x66300F6D)
+I (fs\lfs_util.h)(0x681C6BB1)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\inttypes.h)(0x603507B6)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\assert.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+F (.\MALLOC\malloc.c)(0x6715EEA6)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/malloc.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+F (.\sfud\port\sfud_port.c)(0x6821C1A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/sfud_port.o -MD)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdarg.h)(0x603507D4)
+I (User\spi_flash.h)(0x682ED333)
+I (User\systick.h)(0x6829A8E6)
+I (User\gpio.h)(0x6833C0CC)
+I (Start\gd32f10x.h)(0x681C6B60)
+I (Start\core_cm3.h)(0x679209E8)
+I (Start\core_cmInstr.h)(0x679209E8)
+I (Start\core_cmFunc.h)(0x679209E8)
+I (Start\system_gd32f10x.h)(0x679209E8)
+I (User\gd32f10x_libopt.h)(0x679209E7)
+I (Library\gd32f10x_fmc.h)(0x679209E9)
+I (Library\gd32f10x_pmu.h)(0x679209E9)
+I (Library\gd32f10x_bkp.h)(0x679209E9)
+I (Library\gd32f10x_rcu.h)(0x679209E9)
+I (Library\gd32f10x_exti.h)(0x679209E9)
+I (Library\gd32f10x_gpio.h)(0x679209E9)
+I (Library\gd32f10x_crc.h)(0x679209E9)
+I (Library\gd32f10x_dma.h)(0x679209E9)
+I (Library\gd32f10x_dbg.h)(0x679209E9)
+I (Library\gd32f10x_adc.h)(0x679209E9)
+I (Library\gd32f10x_dac.h)(0x679209E9)
+I (Library\gd32f10x_fwdgt.h)(0x679209E9)
+I (Library\gd32f10x_wwdgt.h)(0x679209E9)
+I (Library\gd32f10x_rtc.h)(0x679209E9)
+I (Library\gd32f10x_timer.h)(0x679209E9)
+I (Library\gd32f10x_usart.h)(0x679209E9)
+I (Library\gd32f10x_i2c.h)(0x679209E9)
+I (Library\gd32f10x_spi.h)(0x679209E9)
+I (Library\gd32f10x_sdio.h)(0x679209E9)
+I (Library\gd32f10x_exmc.h)(0x679209E9)
+I (Library\gd32f10x_can.h)(0x679209E9)
+I (Library\gd32f10x_enet.h)(0x679209E9)
+I (Library\gd32f10x_misc.h)(0x679209E9)
+F (.\sfud\src\sfud.c)(0x66324088)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/sfud.o -MD)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+F (.\sfud\src\sfud_sfdp.c)(0x66324088)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O1 -ffunction-sections -w -I ./Start -I ./User -I ./Library -I ./fs -I ./MALLOC -I ./sfud/inc-IC:/Keil_v5/ARM/PACK/GigaDevice/GD32F10x_DFP/2.3.0/Device/Include-IC:/Keil_v5/ARM/CMSIS/Include-D__UVISION_VERSION="536" -DGD32F10X_HD -DUSE_STDPERIPH_DRIVER-o ./objects/sfud_sfdp.o -MD)
+I (sfud\inc\sfud.h)(0x66324088)
+I (sfud\inc\sfud_def.h)(0x66324088)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x603507CA)
+I (sfud\inc\sfud_cfg.h)(0x681C6793)
+I (sfud\inc\sfud_flash_def.h)(0x67126670)

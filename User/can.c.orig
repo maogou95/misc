@@ -1,0 +1,139 @@
+#include "can.h"
+#include "gd32f10x.h"
+#include <string.h>
+
+
+#define CAN_BAUDRATE 500
+
+
+can_receive_message_struct g_receive_message;
+
+void can_gpio_config(void)
+{
+    /* enable CAN clock */
+    rcu_periph_clock_enable(RCU_CAN0);
+    rcu_periph_clock_enable(RCU_GPIOA);
+    rcu_periph_clock_enable(RCU_AF);
+    
+    /* configure CAN0 GPIO */
+    gpio_init(GPIOA,GPIO_MODE_IPU,GPIO_OSPEED_50MHZ,GPIO_PIN_11);
+    gpio_init(GPIOA,GPIO_MODE_AF_PP,GPIO_OSPEED_50MHZ,GPIO_PIN_12);
+}
+
+void can_nvic_config(void)
+{
+    /* configure CAN0 NVIC */
+    nvic_irq_enable(USBD_LP_CAN0_RX0_IRQn,0,0);
+}
+
+void can_config(uint32_t can_baudrate)
+{
+	
+		can_parameter_struct can_parameter;
+		can_filter_parameter_struct can_filter;
+    can_struct_para_init(CAN_INIT_STRUCT, &can_parameter);
+    can_struct_para_init(CAN_INIT_STRUCT, &can_filter);
+    /* initialize CAN register */
+    can_deinit(CAN0);
+    
+    /* initialize CAN parameters */
+    can_parameter.time_triggered = DISABLE;
+    can_parameter.auto_bus_off_recovery = DISABLE;
+    can_parameter.auto_wake_up = DISABLE;
+    can_parameter.auto_retrans = DISABLE;
+    can_parameter.rec_fifo_overwrite = DISABLE;
+    can_parameter.trans_fifo_order = DISABLE;
+    can_parameter.working_mode = CAN_NORMAL_MODE;
+    can_parameter.resync_jump_width = CAN_BT_SJW_1TQ;
+    can_parameter.time_segment_1 = CAN_BT_BS1_5TQ;
+    can_parameter.time_segment_2 = CAN_BT_BS2_3TQ;
+    
+if (can_baudrate == 1000) {
+    can_parameter.prescaler = 6;    /* 1000KBps (1Mbps) */
+}
+else if (can_baudrate == 500) {
+    can_parameter.prescaler = 12;   /* 500KBps */
+}
+else if (can_baudrate == 250) {
+    can_parameter.prescaler = 24;   /* 250KBps */
+}
+else if (can_baudrate == 125) {
+    can_parameter.prescaler = 48;   /* 125KBps */
+}
+else if (can_baudrate == 100) {
+    can_parameter.prescaler = 60;   /* 100KBps */
+}
+else if (can_baudrate == 50) {
+    can_parameter.prescaler = 120;  /* 50KBps */
+}
+else if (can_baudrate == 20) {
+    can_parameter.prescaler = 300;  /* 20KBps */
+}
+else {
+    /* 默认设置或错误处理 */
+    can_parameter.prescaler = 12;   /* 默认500KBps */
+    // 或者可以添加错误处理：
+    // printf("Error: Unsupported baudrate %d\n", can_baudrate);
+    // return ERROR_UNSUPPORTED_BAUDRATE;
+}
+  
+    /* initialize CAN */
+    can_init(CAN0, &can_parameter);
+
+    /* initialize filter */ 
+    can_filter.filter_number=0;
+    can_filter.filter_mode = CAN_FILTERMODE_MASK;
+    can_filter.filter_bits = CAN_FILTERBITS_32BIT;
+    can_filter.filter_list_high = 0x3000;
+    can_filter.filter_list_low = 0x0000;
+    can_filter.filter_mask_high = 0x3000;
+    can_filter.filter_mask_low = 0x0000;
+    can_filter.filter_fifo_number = CAN_FIFO0;
+    can_filter.filter_enable = ENABLE;
+    
+    can_filter_init(&can_filter);
+    
+}
+
+
+
+/**
+ * @brief  发送 CAN0 消息
+ * @param  id: 标识符（标准帧11位 or 扩展帧29位）
+ * @param  data: 要发送的数据指针
+ * @param  len: 数据长度（0~8 字节）
+ * @param  ext: 是否使用扩展帧（0 = 标准帧，1 = 扩展帧）
+ * @retval 发送结果：SUCCESS or ERROR
+ */
+ErrStatus can0_send_message(uint32_t id, const uint8_t *data, uint8_t len, uint8_t ext)
+{
+    can_trasnmit_message_struct tx_message;
+    memset(&tx_message, 0, sizeof(tx_message));
+
+    if (len > 8) len = 8; // 限制长度
+
+    tx_message.tx_dlen = len;
+    memcpy(tx_message.tx_data, data, len);
+
+    if (ext) {
+        tx_message.tx_ff = CAN_FF_EXTENDED;  // 扩展帧
+        tx_message.tx_efid = id;
+    } else {
+        tx_message.tx_ff = CAN_FF_STANDARD;  // 标准帧
+        tx_message.tx_sfid = id;
+    }
+
+    tx_message.tx_ft = CAN_FT_DATA;  // 数据帧
+
+    // 发送并等待发送完成
+    uint8_t mailbox = can_message_transmit(CAN0, &tx_message);
+    uint32_t timeout = 0xFFFF;
+
+    while ((can_transmit_states(CAN0, mailbox) != CAN_TRANSMIT_OK) && --timeout);
+
+    return (timeout > 0) ? SUCCESS : ERROR;
+}
+
+
+
+

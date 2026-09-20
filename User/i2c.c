@@ -1,0 +1,479 @@
+/*!
+    \file    i2c.c
+    \brief   I2C configuration file
+
+        \version 2024-12-20, V2.5.0, firmware for GD32F10x
+*/
+
+/*
+    Copyright (c) 2024, GigaDevice Semiconductor Inc.
+
+    Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+    1. Redistributions of source code must retain the above copyright notice, this
+       list of conditions and the following disclaimer.
+    2. Redistributions in binary form must reproduce the above copyright notice,
+       this list of conditions and the following disclaimer in the documentation
+       and/or other materials provided with the distribution.
+    3. Neither the name of the copyright holder nor the names of its contributors
+       may be used to endorse or promote products derived from this software without
+       specific prior written permission.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+*/
+
+#include "gd32f10x.h"
+#include "i2c.h"
+#include <stdio.h>
+#include <math.h>
+#include "systick.h"
+
+/*!
+    \brief      configure the GPIO ports
+    \param[in]  none
+    \param[out] none
+    \retval     none
+*/
+
+INA226 g_INA226;
+HDC1080 g_HDC1080;
+environment_t g_environment;
+
+void i2c_gpio_config(void)
+{
+    /* enable GPIOB clock */
+    rcu_periph_clock_enable(RCU_GPIOB);
+    /* connect PB6 to I2C_SCL */
+    /* connect PB7 to I2C_SDA */
+    gpio_init(GPIOB, GPIO_MODE_AF_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_6);
+    gpio_init(GPIOB, GPIO_MODE_AF_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_7);
+
+
+    gpio_init(GPIOB, GPIO_MODE_AF_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+    gpio_init(GPIOB, GPIO_MODE_AF_OD, GPIO_OSPEED_50MHZ, GPIO_PIN_11);
+
+}
+
+/*!
+    \brief      configure the I2CX interfaces
+    \param[in]  none
+    \param[out] none
+    \retval     none
+*/
+void i2c_config(void)
+{
+    /* enable I2C clock */
+    rcu_periph_clock_enable(RCU_I2C0);
+    /* configure I2C clock */
+    i2c_clock_config(I2C0, 100000, I2C_DTCY_2);
+    /* configure I2C address */
+    i2c_mode_addr_config(I2C0, I2C_I2CMODE_ENABLE, I2C_ADDFORMAT_7BITS, 0x00);
+    /* enable I2CX */
+    i2c_enable(I2C0);
+    /* enable acknowledge */
+    i2c_ack_config(I2C0, I2C_ACK_ENABLE);
+
+
+    /* enable I2C clock */
+    rcu_periph_clock_enable(RCU_I2C1);
+    /* configure I2C clock */
+    i2c_clock_config(I2C1, 100000, I2C_DTCY_2);
+    /* configure I2C address */
+    i2c_mode_addr_config(I2C1, I2C_I2CMODE_ENABLE, I2C_ADDFORMAT_7BITS, 0x00);
+    /* enable I2CX */
+    i2c_enable(I2C1);
+    /* enable acknowledge */
+    i2c_ack_config(I2C1, I2C_ACK_ENABLE);
+
+}
+
+
+
+#define INA226_I2C          I2C0
+#define INA226_ADDR         0x41  // 7位地址
+#define INA226_REG_MANUF_ID 0xFE
+#define INA226_REG_DIE_ID   0xFF
+
+#define I2C_TIMEOUT_MAX 100000
+
+void i2c_clear_errors(uint32_t i2c_periph)
+{
+    if (i2c_flag_get(i2c_periph, I2C_FLAG_AERR))
+        i2c_flag_clear(i2c_periph, I2C_FLAG_AERR);
+    if (i2c_flag_get(i2c_periph, I2C_FLAG_LOSTARB))
+        i2c_flag_clear(i2c_periph, I2C_FLAG_LOSTARB);
+    if (i2c_flag_get(i2c_periph, I2C_FLAG_BERR))
+        i2c_flag_clear(i2c_periph, I2C_FLAG_BERR);
+}
+
+
+// 等待某个标志位被设置，带超时
+static uint8_t i2c_wait_flag(uint32_t i2c_periph, uint32_t flag) {
+    uint32_t timeout = I2C_TIMEOUT_MAX;
+    while (!i2c_flag_get(i2c_periph, flag) && timeout--);
+    return (timeout > 0);
+}
+
+// 等待某个标志位被清除，带超时
+static uint8_t i2c_wait_flag_clear(uint32_t i2c_periph, uint32_t flag) {
+    uint32_t timeout = I2C_TIMEOUT_MAX;
+    while (i2c_flag_get(i2c_periph, flag) && timeout--);
+    return (timeout > 0);
+}
+
+uint16_t INA226_ReadRegister(uint8_t reg_addr) {
+    uint8_t msb = 0, lsb = 0;
+    uint16_t result = 0;
+
+    // printf(">> 开始读取寄存器 0x%02X\n", reg_addr);
+
+    // 1. 等待 I2C 总线空闲
+    if (!i2c_wait_flag_clear(INA226_I2C, I2C_FLAG_I2CBSY)) {
+        printf("ERROR: I2C 总线忙，等待超时\n");
+        return 0xFFFF;
+    }
+
+    // 2. 发送 START + 写地址
+    i2c_start_on_bus(INA226_I2C);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_SBSEND)) return 0xFFFF;
+
+    i2c_master_addressing(INA226_I2C, INA226_ADDR << 1, I2C_TRANSMITTER);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_ADDSEND)) return 0xFFFF;
+    i2c_flag_clear(INA226_I2C, I2C_FLAG_ADDSEND);
+
+    // 3. 发送寄存器地址
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_TBE)) return 0xFFFF;
+    i2c_data_transmit(INA226_I2C, reg_addr);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_BTC)) return 0xFFFF;
+
+    // 4. 发送重复 START + 读地址
+    i2c_start_on_bus(INA226_I2C);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_SBSEND)) return 0xFFFF;
+
+    i2c_master_addressing(INA226_I2C, INA226_ADDR << 1, I2C_RECEIVER);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_ADDSEND)) return 0xFFFF;
+    i2c_flag_clear(INA226_I2C, I2C_FLAG_ADDSEND);
+
+    // 5. 读取第一个字节（MSB）
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_RBNE)) return 0xFFFF;
+    msb = i2c_data_receive(INA226_I2C);
+
+    // 6. 关闭 ACK，准备接收最后一字节
+    i2c_ack_config(INA226_I2C, I2C_ACK_DISABLE);
+
+    // 7. 发送 STOP
+    i2c_stop_on_bus(INA226_I2C);
+
+    // 8. 读取第二个字节（LSB）
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_RBNE)) return 0xFFFF;
+    lsb = i2c_data_receive(INA226_I2C);
+
+    // 9. 等待 STOP 完成
+    while (i2c_flag_get(INA226_I2C, I2C_CTL0_STOP));
+
+    // 10. 重新打开 ACK
+    i2c_ack_config(INA226_I2C, I2C_ACK_ENABLE);
+
+    // 11. 等待总线空闲
+    if (!i2c_wait_flag_clear(INA226_I2C, I2C_FLAG_I2CBSY)) {
+        printf("ERROR: I2C 总线未释放\n");
+        return 0xFFFF;
+    }
+
+    result = (msb << 8) | lsb;
+//   printf("<< 读取完成：0x%04X\n", result);
+    return result;
+}
+
+
+
+#define DBG(x)   printf("[debug] %s\n", x)
+
+void INA226_WriteRegister(uint8_t reg_addr, uint16_t value)
+{
+    uint8_t high_byte = (value >> 8) & 0xFF;
+    uint8_t low_byte  = value & 0xFF;
+
+    // printf(">> 写寄存器 0x%02X，值：0x%04X\n", reg_addr, value);
+
+
+    // 确保总线空闲
+    if (!i2c_wait_flag_clear(I2C0, I2C_FLAG_I2CBSY)) {
+        printf("[error] I2C 总线忙，退出\n");
+        return;
+    }
+    i2c_clear_errors(INA226_I2C);
+    // START
+    i2c_start_on_bus(INA226_I2C);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_SBSEND)) {
+        printf("[error] Start 失败\n");
+        return;
+    }
+
+    // 发送设备地址（写）
+    i2c_master_addressing(INA226_I2C, INA226_ADDR << 1, I2C_TRANSMITTER);
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_ADDSEND)) {
+        printf("[error] 设备地址发送失败\n");
+        return;
+    }
+    i2c_flag_clear(INA226_I2C, I2C_FLAG_ADDSEND);
+
+    // 发送寄存器地址
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_TBE)) return;
+    i2c_data_transmit(INA226_I2C, reg_addr);
+
+    // 发送高字节
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_TBE)) return;
+    i2c_data_transmit(INA226_I2C, high_byte);
+
+    // 发送低字节
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_TBE)) return;
+    i2c_data_transmit(INA226_I2C, low_byte);
+
+    // 等待完成
+    if (!i2c_wait_flag(INA226_I2C, I2C_FLAG_BTC)) return;
+
+    // STOP
+    i2c_stop_on_bus(INA226_I2C);
+
+    if (!i2c_wait_flag_clear(INA226_I2C, I2C_CTL0_STOP)) {
+        printf("[error] STOP 信号未能清除\n");
+        return;
+    }
+
+    // 确保总线空闲
+    if (!i2c_wait_flag_clear(I2C0, I2C_FLAG_I2CBSY)) {
+        printf("[error] I2C 总线未空闲\n");
+        return;
+    }
+
+    //  printf("<< 写入完成\n");
+}
+
+
+
+#define HDC1080_ADDR     0x40
+#define HDC1080_I2C      I2C0  // 根据实际更改
+
+void  I2C0_Register_Read(uint8_t* B_buffer, uint8_t read_address,uint16_t number_of_byte)
+{
+    /* wait until I2C bus is idle */
+    while(i2c_flag_get(I2C0, I2C_FLAG_I2CBSY));
+    if(2 == number_of_byte) {
+        i2c_ackpos_config(I2C0,I2C_ACKPOS_NEXT);
+    }
+    /* send a start condition to I2C bus */
+    i2c_start_on_bus(I2C0);
+    /* wait until SBSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_SBSEND));
+    i2c_master_addressing(I2C0, HDC1080_ADDR << 1, I2C_TRANSMITTER);
+    /* wait until ADDSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_ADDSEND));
+    /* clear the ADDSEND bit */
+    i2c_flag_clear(I2C0, I2C_FLAG_ADDSEND);
+    /* wait until the transmit data buffer is empty */
+    while(SET != i2c_flag_get( I2C0, I2C_FLAG_TBE));
+    /* enable I2C0*/
+    i2c_enable(I2C0);
+    /* send the EEPROM's internal address to write to */
+    i2c_data_transmit(I2C0, read_address);
+    /* wait until BTC bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_BTC));
+    delay_1ms(20);
+    /* send a start condition to I2C bus */
+    i2c_start_on_bus(I2C0);
+    /* wait until SBSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_SBSEND));
+    /* send slave address to I2C bus */
+    i2c_master_addressing(I2C0, HDC1080_ADDR << 1, I2C_RECEIVER);
+    if(number_of_byte < 3) {
+        /* disable acknowledge */
+        i2c_ack_config(I2C0,I2C_ACK_DISABLE);
+    }
+    /* wait until ADDSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_ADDSEND));
+    /* clear the ADDSEND bit */
+    i2c_flag_clear(I2C0,I2C_FLAG_ADDSEND);
+    if(1 == number_of_byte) {
+        /* send a stop condition to I2C bus */
+        i2c_stop_on_bus(I2C0);
+    }
+    /* while there is data to be read */
+    while(number_of_byte) {
+        if(3 == number_of_byte) {
+            /* wait until BTC bit is set */
+            while(!i2c_flag_get(I2C0, I2C_FLAG_BTC));
+            /* disable acknowledge */
+            i2c_ack_config(I2C0,I2C_ACK_DISABLE);
+        }
+        if(2 == number_of_byte) {
+            /* wait until BTC bit is set */
+            while(!i2c_flag_get(I2C0, I2C_FLAG_BTC));
+            /* send a stop condition to I2C bus */
+            i2c_stop_on_bus(I2C0);
+        }
+        delay_1ms(1);
+        /* wait until the RBNE bit is set and clear it */
+        if(i2c_flag_get(I2C0, I2C_FLAG_RBNE)) {
+            /* read a byte from the EEPROM */
+            *B_buffer = i2c_data_receive(I2C0);
+            /* point to the next location where the byte read will be saved */
+            B_buffer++;
+            /* decrement the read bytes counter */
+            number_of_byte--;
+
+        }
+
+    }
+    /* wait until the stop condition is finished */
+    while(I2C_CTL0(I2C0)&0x0200);
+    /* enable acknowledge */
+    i2c_ack_config(I2C0, I2C_ACK_ENABLE);
+    i2c_ackpos_config(I2C0, I2C_ACKPOS_CURRENT);
+}
+
+
+
+
+
+void I2C0_Byte_Write(uint8_t* P_buffer, uint8_t write_address)
+{
+    uint8_t i;
+    /* wait until I2C bus is idle */
+    while(i2c_flag_get(I2C0, I2C_FLAG_I2CBSY));
+    /* send a start condition to I2C bus */
+    i2c_start_on_bus(I2C0);
+    /* wait until SBSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_SBSEND));
+    /* send slave address to I2C bus */
+    i2c_master_addressing(I2C0, HDC1080_ADDR << 1, I2C_TRANSMITTER);
+    /* wait until ADDSEND bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_ADDSEND));
+    /* clear the ADDSEND bit */
+    i2c_flag_clear(I2C0,I2C_FLAG_ADDSEND);
+    /* wait until the transmit data buffer is empty */
+    while(SET != i2c_flag_get(I2C0, I2C_FLAG_TBE));
+    /* send the EEPROM's internal address to write to : only one byte address */
+    i2c_data_transmit(I2C0, write_address);
+    /* wait until BTC bit is set */
+    while(!i2c_flag_get(I2C0, I2C_FLAG_BTC));
+    for(i=0; i<2; i++)
+    {
+        /* send the byte to be written */
+        i2c_data_transmit(I2C0, *(P_buffer+i));
+        /* wait until BTC bit is set */
+        while(!i2c_flag_get(I2C0, I2C_FLAG_TBE));
+    }
+    /* send a stop condition to I2C bus */
+    i2c_stop_on_bus(I2C0);
+    /* wait until the stop condition is finished */
+    while(I2C_CTL0(I2C0)&0x0200);
+
+}
+
+
+void SernerConfig(void)
+{
+    union registers da;
+
+    /**********ina226**************/
+
+
+
+    uint8_t tData[3];
+    tData[0] = Configuration_Register;
+    tData[1] = Configuration_Register_Init >> 8;
+    tData[2] = (uint8_t)Configuration_Register_Init;
+
+    INA226_WriteRegister(Configuration_Register, Configuration_Register_Init);
+    INA226_ReadRegister(Configuration_Register);
+
+    delay_1ms(5);
+    tData[0] = Calibration_Register;
+    tData[1] = CAL >> 8;
+    tData[2] = (uint8_t)CAL;
+    INA226_WriteRegister(Calibration_Register, CAL);
+    INA226_ReadRegister(Calibration_Register);
+		printf("INA226 REG CONFIG SUCCESE!\n");
+
+    ///*******hdc1080*******/
+
+    uint8_t InitSetup[2]={0x10,0x00};
+		I2C0_Byte_Write(InitSetup, Configuration_register_add);
+		delay_1ms(20);
+		
+		
+		uint32_t DID=0;
+		uint8_t    IDBuffer[2]={0};
+		I2C0_Register_Read(IDBuffer,DeviceID_register_add,2);
+    DID = (((uint32_t)IDBuffer[0])<<8 | IDBuffer[1]);
+    printf("The DeviceID is 0x%x\n\r",DID);
+}
+
+void ReadSernerData(void)
+{
+
+    unsigned char data[4] = {0};
+    float  temp_x,humi_x;
+    uint8_t send_data = Temperature_register_add;
+
+    uint16_t da;
+
+    /**********ina226**************/
+    da = INA226_ReadRegister(Shunt_Voltage_Register);
+    g_INA226.Shunt_voltage = da * INA226_VAL_LSB;
+
+    da = INA226_ReadRegister(Bus_Voltage_Register);
+    g_INA226.voltageVal = da * Voltage_LSB;
+
+    da = INA226_ReadRegister(Power_Register);
+    g_INA226.Power = da * POWER_LSB;
+
+    da = INA226_ReadRegister(Current_Register);
+    g_INA226.Shunt_Current = da * CURRENT_LSB;
+    g_INA226.Power_Val = g_INA226.voltageVal*0.001f * g_INA226.Shunt_Current*0.001f; //mV*mA
+
+    //	printf("============== INA226 读取结果 ==============\n");
+    //  printf("Shunt Voltage     = %.2f uV\n", g_INA226.Shunt_voltage);
+    //  printf("Bus Voltage       = %.2f mV\n", g_INA226.voltageVal);
+    //  printf("Current           = %.2f mA\n", g_INA226.Shunt_Current);
+    //  printf("Power (Reg)       = %.2f mW\n", g_INA226.Power);
+    //  printf("Power (Calc)      = %.3f W\n", g_INA226.Power_Val);
+    //  printf("============================================\n\n");
+    //
+
+    /*******hdc1080*******/
+		
+
+		
+		
+		I2C0_Register_Read(data,Temperature_register_add,2);
+		I2C0_Register_Read(&data[2],Humidity_register_add,2);
+    temp_x=(float)(data[0]<<8|data[1]);
+    temp_x=(temp_x/pow(2,16))*165-40;
+
+    humi_x=(float)(data[2]<<8|data[3]);
+    humi_x=(humi_x/pow(2,16))*100;
+
+    g_HDC1080.Temp=temp_x;
+    g_HDC1080.Humi=humi_x;
+    //
+    g_environment.voltageVal = g_INA226.voltageVal/1000.0f;
+    g_environment.Temp = g_HDC1080.Temp;
+    g_environment.Humi = g_HDC1080.Humi;
+    g_environment.currentVal = g_INA226.Shunt_Current*0.001f;
+
+
+ //   printf("voltageVal = %f, Temp = %f, Humi = %f", g_environment.voltageVal, g_environment.Temp, g_environment.Humi);
+
+}

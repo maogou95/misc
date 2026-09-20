@@ -1,0 +1,167 @@
+#include "usart.h"
+#include "gpio.h"
+#include "systick.h"
+#define USART0_RDATA_ADDRESS      ((uint32_t)&USART_DATA(USART0))
+#define USART2_RDATA_ADDRESS      ((uint32_t)&USART_DATA(USART2))
+
+static UART_Recv_t uart0_rx;
+static UART_Recv_t uart2_rx;
+
+
+UART_Recv_t *get_UART_Recv_t(USART_Num_e usart_num)
+{
+    UART_Recv_t *p;
+    if (usart_num == usart0) {
+
+        p = &uart0_rx;
+
+    } else if (usart_num == usart2) {
+
+        p = &uart2_rx;
+
+    } else {
+
+        p = NULL;
+    }
+    return p;
+}
+
+
+
+void nvic_config(void)
+{
+    nvic_irq_enable(USART0_IRQn, 0, 0);
+    nvic_irq_enable(USART2_IRQn, 0, 0);
+}
+
+void dma_config(void)
+{
+    dma_parameter_struct dma_init_struct;
+
+    rcu_periph_clock_enable(RCU_DMA0);
+
+    /* deinitialize DMA channel4 (USART0 rx) */
+    dma_deinit(DMA0, DMA_CH4);
+    dma_init_struct.direction = DMA_PERIPHERAL_TO_MEMORY;
+    dma_init_struct.memory_addr = (uint32_t)uart0_rx.buffer;
+    dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+    dma_init_struct.memory_width = DMA_MEMORY_WIDTH_8BIT;
+    dma_init_struct.number = UART_RX_BUF_LEN;
+    dma_init_struct.periph_addr = USART0_RDATA_ADDRESS;
+    dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+    dma_init_struct.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
+    dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+    dma_init(DMA0, DMA_CH4, &dma_init_struct);
+    /* configure DMA mode */
+    dma_circulation_disable(DMA0, DMA_CH4);
+    /* enable DMA channel4 */
+    dma_channel_enable(DMA0, DMA_CH4);
+
+
+
+    dma_deinit(DMA0, DMA_CH2);
+    dma_init_struct.direction = DMA_PERIPHERAL_TO_MEMORY;
+    dma_init_struct.memory_addr = (uint32_t)uart2_rx.buffer;
+    dma_init_struct.memory_inc = DMA_MEMORY_INCREASE_ENABLE;
+    dma_init_struct.memory_width = DMA_MEMORY_WIDTH_8BIT;
+    dma_init_struct.number = UART_RX_BUF_LEN;
+    dma_init_struct.periph_addr = USART2_RDATA_ADDRESS;
+    dma_init_struct.periph_inc = DMA_PERIPH_INCREASE_DISABLE;
+    dma_init_struct.periph_width = DMA_PERIPHERAL_WIDTH_8BIT;
+    dma_init_struct.priority = DMA_PRIORITY_ULTRA_HIGH;
+    dma_init(DMA0, DMA_CH2, &dma_init_struct);
+    /* configure DMA mode */
+    dma_circulation_disable(DMA0, DMA_CH2);
+    /* enable DMA channel4 */
+    dma_channel_enable(DMA0, DMA_CH2);
+}
+
+
+void usart_config(uint32_t rs485Baudrate, uint32_t btBaudrate, uint32_t dbBaudrate)
+{
+    /**RS485 ´®¿Ú**/
+    /* enable GPIO clock */
+    rcu_periph_clock_enable(RCU_GPIOA);
+
+    /* enable USART clock */
+    rcu_periph_clock_enable(RCU_USART0);
+
+    /* connect port to USARTx_Tx */
+    gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_9);
+
+    /* connect port to USARTx_Rx */
+    gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+
+    /* USART configure */
+    usart_deinit(USART0);
+    usart_baudrate_set(USART0, rs485Baudrate);
+    usart_receive_config(USART0, USART_RECEIVE_ENABLE);
+    usart_transmit_config(USART0, USART_TRANSMIT_ENABLE);
+    usart_dma_receive_config(USART0, USART_RECEIVE_DMA_ENABLE);
+    usart_enable(USART0);
+    usart_interrupt_enable(USART0, USART_INT_IDLE);
+
+
+    /**À¶ÑÀ ´®¿Ú**/
+    /* enable GPIO clock */
+    rcu_periph_clock_enable(RCU_GPIOA);
+
+    /* enable USART clock */
+    rcu_periph_clock_enable(RCU_USART2);
+
+    /* connect port to USARTx_Tx */
+    gpio_init(GPIOA, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_2);
+
+    /* connect port to USARTx_Rx */
+    gpio_init(GPIOA, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_3);
+
+    /* USART configure */
+    usart_deinit(USART2);
+    usart_baudrate_set(USART2, btBaudrate);
+    usart_receive_config(USART2, USART_RECEIVE_ENABLE);
+    usart_transmit_config(USART2, USART_TRANSMIT_ENABLE);
+    usart_dma_receive_config(USART2, USART_RECEIVE_DMA_ENABLE);
+    usart_enable(USART2);
+    usart_interrupt_enable(USART2, USART_INT_IDLE);
+
+    /**debug ´®¿Ú**/
+    /* enable GPIO clock */
+    rcu_periph_clock_enable(RCU_GPIOC);
+
+    /* enable USART clock */
+    rcu_periph_clock_enable(RCU_UART4);
+
+    /* connect port to USARTx_Tx */
+    gpio_init(GPIOC, GPIO_MODE_AF_PP, GPIO_OSPEED_50MHZ, GPIO_PIN_10);
+
+    /* connect port to USARTx_Rx */
+    gpio_init(GPIOC, GPIO_MODE_IN_FLOATING, GPIO_OSPEED_50MHZ, GPIO_PIN_11);
+
+    /* USART configure */
+    usart_deinit(UART4);
+    usart_baudrate_set(UART4, dbBaudrate);
+    usart_receive_config(UART4, USART_RECEIVE_DISABLE);
+    usart_transmit_config(UART4, USART_TRANSMIT_ENABLE);
+    usart_enable(UART4);
+}
+
+
+void rs485_sendbuff(uint8_t *buff, uint16_t length)
+{
+	uint16_t tx_count = 0;
+	RS485_DE_LOW();
+for(tx_count = 0; tx_count < length; tx_count++) {
+                while(RESET == usart_flag_get(USART0, USART_FLAG_TBE));
+                usart_data_transmit(USART0, buff[tx_count]);
+            }
+delay_1ms(10);
+RS485_DE_HIGH();
+}
+
+
+void bt_sendbuff(uint8_t *buff, uint16_t length)
+{
+
+
+}
+
